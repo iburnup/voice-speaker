@@ -1,0 +1,13 @@
+[Unit]
+Description=Indicator Board
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/ian/speaker
+Restart=no
+User=ian
+ExecStart=/usr/bin/python3 /home/ian/speaker/speaker.py
+
+[Install]
+WantedBy=multi-user.target
