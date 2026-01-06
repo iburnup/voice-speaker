@@ -1,11 +1,13 @@
 
+
+#### Features
+
 Use piper to convert text received via MQTT to speech.
 Use a button to cancel alarms.
-
 Use raspberry pi zero and python
-[[I2S Sound output]]
+Speaker connected using i2s
 [Neokey](https://learn.adafruit.com/neokey-breakout)
-[Source](https://git.iantech.uk/ian/speak)
+
 
 
 | **Connection**   | **Value** | **Pin** | **Pin** | **Value** | **Connection**   |
