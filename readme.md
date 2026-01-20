@@ -10,8 +10,16 @@
 
 #### Dependencies
 
-piper-tts
-paho-mqtt > 2
+Install using pip
+
+ * piper-tts
+ * paho-mqtt > 2
+
+Also required :-
+
+```shell
+sudo apt install python3-pyaudio
+```
 
 
 #### Piper voices
