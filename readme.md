@@ -8,6 +8,18 @@
 * Speaker connected using i2s
 
 
+#### Dependencies
+
+#### Piper voices
+
+Down load a voice for piper (this takes along time and there is no indication that it is progressing - so be patient)
+
+
+```shell
+python3 -m piper.download_voices en_GB-jenny_dioco-medium
+```
+
+
 
 [Neokey](https://learn.adafruit.com/neokey-breakout)
 
