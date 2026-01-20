@@ -6,3 +6,4 @@ en_GB-jenny_dioco-medium.onnx.json
 logs/*.log
 nohup.out
 test.py
+settings.py

@@ -6,7 +6,7 @@ mosquito = {
     "port": 1883,
     "user": "",
     "pw": "",
-    "base_topic": "sound",
+    "base_topic": "soundtest",
     "ssl":False,
     "name":"speaker"
 }
