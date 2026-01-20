@@ -10,6 +10,10 @@
 
 #### Dependencies
 
+piper-tts
+paho-mqtt > 2
+
+
 #### Piper voices
 
 Down load a voice for piper (this takes along time and there is no indication that it is progressing - so be patient)
