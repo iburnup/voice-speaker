@@ -3,6 +3,6 @@
 __pycache__/*.pyc
 en_GB-jenny_dioco-medium.onnx
 en_GB-jenny_dioco-medium.onnx.json
-logs/server.log
+logs/*.log
 nohup.out
 test.py

@@ -16,7 +16,7 @@ from piper_voice import PiperJenny
 #from gpiozero import Button
 import RPi.GPIO as GPIO
 from time import sleep
-import board
+#import board
 
 
 
@@ -27,7 +27,7 @@ dictConfig(LOG_CONFIG)
 
 logger = logging.getLogger("server")
 
-mqtt_client = mqtt.Client("mars-speach-handler")
+mqtt_client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2,"mars-speech-handler")
 
 
 pv = PiperJenny()
