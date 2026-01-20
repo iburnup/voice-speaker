@@ -84,17 +84,21 @@ def handle_speak(mqtt_client, userdata, message):
         logger.debug(data)
         PROCESS_INTERVAL = 15
         # todo check repeat is valid
-        repeat = data["repeat"]
-        #pv.say(data["text"])
-        GPIO.output(BUTTON_LED_PIN,GPIO.HIGH)
-        while repeat:
-            pv.say(data["text"])
-            logger.debug("starting to sleep")
-            for _ in range(PROCESS_INTERVAL):
-                if not repeat:
-                    break
-                sleep(1)
-            #sleep(15)            
+        #repeat = data["repeat"]
+        if data["repeat"] == True:
+            repeat = True
+            GPIO.output(BUTTON_LED_PIN,GPIO.HIGH)
+            while repeat:
+                pv.say(data["text"])
+                logger.debug("starting to sleep")
+                for _ in range(PROCESS_INTERVAL):
+                    if not repeat:
+                        break
+                    sleep(1)
+                #sleep(15)
+        else:
+            repeat = False
+            pv.say(data["text"])             
     except KeyError as ex:
         logger.error(f"Status: KeyError: {ex}" ,exc_info=True)
     except Exception as ex:
