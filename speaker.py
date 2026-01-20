@@ -56,7 +56,7 @@ def on_connect(client, userdata, flags, rc, properties=None):
         client.subscribe(f"{mqtt_settings['base_topic']}/talk")
 
 
-def on_disconnect(client, userdata, rc, properties=None):
+def on_disconnect(client, userdata, flags, rc, properties=None):
     logger.info("disconnect {}".format(rc))
 
 
@@ -120,7 +120,8 @@ def start_mqtt_client():
         mqtt_client.on_connect = on_connect
         mqtt_client.on_disconnect = on_disconnect
         mqtt_client.on_subscribe = on_subscribe
-        mqtt_client.message_callback_add("sound/talk", handle_speak)
+        mqtt_client.message_callback_add(f"{mqtt_settings['base_topic']}/talk"
+                                         , handle_speak)
         mqtt_client.will_set("status/server/disconnect", json.dumps({}))
         # enable TLS for secure connection - required for hivemq
         if mqtt_settings['ssl'] == True:
