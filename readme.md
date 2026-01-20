@@ -24,7 +24,9 @@ sudo apt install python3-pyaudio
 
 #### Piper voices
 
-Down load a voice for piper (this takes along time and there is no indication that it is progressing - so be patient)
+Download a voice for piper (this takes along time and there is no indication that it is progressing - so be patient)
+
+See [here](https://github.com/OHF-Voice/piper1-gpl/blob/main/docs/VOICES.md) for options.
 
 
 ```shell
