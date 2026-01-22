@@ -24,11 +24,15 @@ class PiperJenny():
             rate = 22050,  
             output = True)
 
+
         for audio_chunk in self.voice.synthesize(text_data):
+            #set_audio_format(chunk.sample_rate, chunk.sample_width, chunk.sample_channels)
+            
+
             # Process each chunk
-            sample_rate = audio_chunk.sample_rate
-            audio_bytes = audio_chunk.audio_int16_bytes
-            stream.write(audio_bytes)
+            #sample_rate = audio_chunk.sample_rate
+            #audio_bytes = audio_chunk.audio_int16_bytes
+            stream.write(audio_chunk.audio_int16_bytes)
 
         stream.stop_stream()  
         stream.close()
